@@ -1,8 +1,0 @@
-1. Crop photo and paste selected area as new image
-2. Resize image, width must be 300 or less, height 350 or less, whichever is better always keeping constraints
-3. Select a random piece which will become thumbnail, try to make it as square as possible
-4. Copy and paste piece as new image
-5. Resize new image by making width or height 60 (which ever is less)
-6. If not 60x60, canvas size image until it is
-7. Save thumbnail for web
-8. Now save cropped image web
