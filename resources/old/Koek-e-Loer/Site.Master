@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Koek_e_Loer.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Koek-e-loer - it's art, but you can eat it...</title>
+    
+    <meta name="description" content="Novelty cakes and cupcakes for birthdays, weddings or any themed party in the Pretoria \ Tshwane \ Gauteng region" />
+    <meta name="keywords" content="cakes, koeke, cupcakes, themed party cakes, verjaarsdag koeke, birthday cakes, troukoeke, wedding cakes, 3d cupcakes, printed cakes, baby cakes, novelty cakes, Centurion, Pretoria, Tshwane, Gauteng, winnie the pooh, fairies, smurfs, weddings" />
+	<meta http-equiv="Content-Language" content="en"/>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="google-site-verification" content="UA-47183520-1" />
+    
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+    
+    <link id="ctl00_Link1" rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link id="ctl00_Link2" rel="icon" href="favicon.ico" type="image/ico" /><link rel="shortcut icon" href="http://www.koek-e-loer.co.za/favicon.ico" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47183520-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="main" style="text-align:center;">
+        <div class="banner">
+            <a href="http://www.koek-e-loer.co.za/index.aspx"><img src="pics/banner.gif" alt="banner" style="margin-top:3px;" /></a>
+        </div>
+        <div class="divider">
+            &nbsp;
+        </div>
+        <div id="menu">
+            <ul class="cssmenu">
+                <li class="home"><a href="index.aspx" title="Home"><span class="displace">Home</span></a></li>
+                <li><img src="pics/menu_divider.gif" alt="divider" /></li>
+                <li class="galleries"><a href="galleries.aspx" title="Galleries"><span class="displace">Galleries</span></a></li>
+                <li><img src="pics/menu_divider.gif" alt="divider" /></li>
+                <li class="contact"><a href="contactus.aspx" title="Contact Us"><span class="displace">Contact Us</span></a></li>
+            </ul>    
+        </div>
+        <div class="divider">
+            &nbsp;
+        </div>
+        <div class="contents">
+        <asp:ContentPlaceHolder ID="content" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div class="footers">
+            <p style="text-align:center;">Website powered by Feister.<br />All images copyright Ferreira Photography Ltd.</p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

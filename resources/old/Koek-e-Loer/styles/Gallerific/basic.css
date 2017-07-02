@@ -1,0 +1,25 @@
+li {
+	line-height: 1.8em;
+}
+pre {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	overflow-x: auto;
+}
+div#page {
+	width: 665px;
+	background-color: #f8f5e6;
+	margin: 0 auto;
+	text-align: left;
+	border-color: #ddd;
+	border-style: none solid solid;
+	border-width: medium 0px 0px;
+}
+div#container {
+	padding: 10px;
+	background-color:#dfdebf;
+}
+div#ads {
+	clear: both;
+	padding: 12px 0 12px 66px;
+}

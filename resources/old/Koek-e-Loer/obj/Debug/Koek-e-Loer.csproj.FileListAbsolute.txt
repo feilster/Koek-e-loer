@@ -1,0 +1,5 @@
+C:\Documents and Settings\Martin Ferreira\My Documents\Visual Studio 2008\Projects\Koek-e-Loer\Koek-e-Loer\bin\Koek-e-Loer.dll
+C:\Documents and Settings\Martin Ferreira\My Documents\Visual Studio 2008\Projects\Koek-e-Loer\Koek-e-Loer\bin\Koek-e-Loer.pdb
+C:\Documents and Settings\Martin Ferreira\My Documents\Visual Studio 2008\Projects\Koek-e-Loer\Koek-e-Loer\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Martin Ferreira\My Documents\Visual Studio 2008\Projects\Koek-e-Loer\Koek-e-Loer\obj\Debug\Koek-e-Loer.dll
+C:\Documents and Settings\Martin Ferreira\My Documents\Visual Studio 2008\Projects\Koek-e-Loer\Koek-e-Loer\obj\Debug\Koek-e-Loer.pdb
