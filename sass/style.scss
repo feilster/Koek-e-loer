@@ -16,6 +16,9 @@ $brand-danger:          #fb4f59 !default;
 
 $brand-white: #fff !default;
 $brand-black: #000 !default;
+$brand-pink: #a21360 !default;
+$brand-pink-dark: #461630 !default;
+
 
 
 $input-border-focus:  $brand-primary !default;
@@ -474,7 +477,7 @@ p {
 	.fh5co-text {
 		padding: 2em 6em;
 		text-align: left;
-		background: #130d08 url(../images/wood_1.png) repeat;
+		background: #130d08 url(../images/../images/pink-candystripes.jpg) repeat;
 		@media screen and (max-width: $screen-lg) {
 			padding: 1em;
 		}
@@ -483,7 +486,7 @@ p {
 		}
 		.heading {
 			margin-bottom: 30px;
-			color: $brand-white;
+			color: $brand-pink;
 			font-style: italic;
 			font-weight: 300;
 			position: relative;
@@ -496,16 +499,15 @@ p {
 				width: 40px;
 				height: 2px;
 				left: 50%;
-				background: #fb6e14;
+				background: $brand-pink;
 				margin-left: -20px;
 			}
 		}
 		p {
 
 			line-height: 2;
-			color: #a99c92;
+			color: $brand-pink-dark;
 			span.firstcharacter { float: left;
-				color: #903;
 				font-size: 75px;
 				line-height: 60px;
 				padding-top: 4px;
@@ -514,7 +516,7 @@ p {
 				font-style: italic;
 				top: -20px;
 				position: relative;
-				color: $brand-white;
+				color: $brand-pink;
 				font-family: $font-primary;
 			}
 		}
@@ -600,7 +602,7 @@ p {
 
 #fh5co-featured {
 	padding: 7em 0;
-	background: #130d08 url(../images/wood_1.png) repeat;
+	background: #130d08 url(../images/../images/pink-candystripes.jpg) repeat;
 	@media screen and (max-width :$screen-sm) {
 		padding: 5em 0;
 	}
