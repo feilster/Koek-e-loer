@@ -1,4 +1,6 @@
-$font-primary: 'Source Sans Pro', Arial, sans-serif;
+
+$font-primary: 'Playfair Display', serif;
+$font-secondary: 'Merriweather', serif;
 
 // Overrides
 $grid-gutter-width: 40px !default;
@@ -8,11 +10,11 @@ $padding-base-vertical: 14px !default;
 // $brand-primary: #52d3aa !default;
 // $brand-secondary: #3f95ea !default;
 
-$brand-primary: 			#fb6e14 !default;
-$brand-success:         #58ca7e !default;
-$brand-info:            #1784fb !default;
-$brand-warning:         #fed330 !default;
-$brand-danger:          #fb4f59 !default;
+$brand-primary: #a21360 !default;
+$brand-success: #58ca7e !default;
+$brand-info: #1784fb !default;
+$brand-warning: #fed330 !default;
+$brand-danger: #fb4f59 !default;
 
 $brand-white: #fff !default;
 $brand-black: #000 !default;
@@ -21,11 +23,8 @@ $brand-pink-dark: #461630 !default;
 
 
 
-$input-border-focus:  $brand-primary !default;
-$form-group-margin-bottom:       30px !default;
-
-$font-primary: 'Playfair Display', serif;
-$font-secondary: 'Merriweather', serif;;
+// $input-border-focus:  $brand-primary !default;
+// $form-group-margin-bottom: 30px !default;
 
 // Mixin
 @mixin transition($transition, $ease: ease) {
@@ -35,7 +34,7 @@ $font-secondary: 'Merriweather', serif;;
     -ms-transition: 		all $transition $ease;
     transition:         all $transition $ease;
 }
-@mixin fh5co-translate($translatex) {
+@mixin kkl-translate($translatex) {
 	-moz-transform: translateX($translatex);
 	-webkit-transform: translateX($translatex);
 	-ms-transform: translateX($translatex);
@@ -98,9 +97,6 @@ $font-secondary: 'Merriweather', serif;;
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
-
-
-
 body {
 	font-family: $font-secondary;
 	font-size: 18px;
@@ -112,170 +108,170 @@ body {
 	}
 }
 
-a {
-	color: $brand-primary;
-	@include transition(.5s);
-	&:hover, &:focus, &:active {
-		color: darken($brand-primary, 15%);
-	}
-}
+// a {
+// 	color: $brand-primary;
+// 	@include transition(.5s);
+// 	&:hover, &:focus, &:active {
+// 		color: darken($brand-primary, 15%);
+// 	}
+// }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $font-primary;
-	color: $brand-black;
-}
-p {
-	margin-bottom: 30px;
-}
+// h1, h2, h3, h4, h5, h6 {
+// 	font-family: $font-primary;
+// 	color: $brand-black;
+// }
+// p {
+// 	margin-bottom: 30px;
+// }
 
 
-// Buttons
-.btn {
-	margin-right: 4px;
-	margin-bottom: 4px;
-	font-family: $font-primary;
-	font-size: 12px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	font-weight: 700;
-	@include border-radius(4px);
-	@include transition(.5s);
-	&.btn-md {
-		padding: 10px 20px!important;
-	}
-	&.btn-lg {
-		padding: 18px 36px!important;
-	}
-	&:hover, &:active, &:focus {
-		box-shadow: none!important;
-		outline: none!important;
-	}
-}
-.btn-primary {
-	background: $brand-primary;
-	color: $brand-white;
-	border: 2px solid $brand-primary;
-	&:hover, &:focus, &:active {
-		background: darken($brand-primary, 5%)!important;
-		border-color: darken($brand-primary, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-primary;
-		border: 2px solid $brand-primary;
-		&:hover, &:focus, &:active {
-			background: $brand-primary;
-			color: $brand-white;
-		}
-	}
-}
-.btn-success {
-	background: $brand-success;
-	color: $brand-white;
-	border: 2px solid $brand-success;
-	&:hover, &:focus, &:active {
-		background: darken($brand-success, 5%)!important;
-		border-color: darken($brand-success, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-success;
-		border: 2px solid $brand-success;
-		&:hover, &:focus, &:active {
-			background: $brand-success;
-			color: $brand-white;
-		}
-	}
-}
-.btn-info {
-	background: $brand-info;
-	color: $brand-white;
-	border: 2px solid $brand-info;
-	&:hover, &:focus, &:active {
-		background: darken($brand-info, 5%)!important;
-		border-color: darken($brand-info, 5%)!important;
-	}
+// // Buttons
+// .btn {
+// 	margin-right: 4px;
+// 	margin-bottom: 4px;
+// 	font-family: $font-primary;
+// 	font-size: 12px;
+// 	letter-spacing: 2px;
+// 	text-transform: uppercase;
+// 	font-weight: 700;
+// 	@include border-radius(4px);
+// 	@include transition(.5s);
+// 	&.btn-md {
+// 		padding: 10px 20px!important;
+// 	}
+// 	&.btn-lg {
+// 		padding: 18px 36px!important;
+// 	}
+// 	&:hover, &:active, &:focus {
+// 		box-shadow: none!important;
+// 		outline: none!important;
+// 	}
+// }
+// .btn-primary {
+// 	background: $brand-primary;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-primary;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-primary, 5%)!important;
+// 		border-color: darken($brand-primary, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-primary;
+// 		border: 2px solid $brand-primary;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-primary;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-success {
+// 	background: $brand-success;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-success;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-success, 5%)!important;
+// 		border-color: darken($brand-success, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-success;
+// 		border: 2px solid $brand-success;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-success;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-info {
+// 	background: $brand-info;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-info;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-info, 5%)!important;
+// 		border-color: darken($brand-info, 5%)!important;
+// 	}
 
-	&.btn-outline {
-		background: transparent;
-		color: $brand-info;
-		border: 2px solid $brand-info;
-		&:hover, &:focus, &:active {
-			background: $brand-info;
-			color: $brand-white;
-		}
-	}
-}
-.btn-warning {
-	background: $brand-warning;
-	color: $brand-white;
-	border: 2px solid $brand-warning;
-	&:hover, &:focus, &:active {
-		background: darken($brand-warning, 5%)!important;
-		border-color: darken($brand-warning, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-warning;
-		border: 2px solid $brand-warning;
-		&:hover, &:focus, &:active {
-			background: $brand-warning;
-			color: $brand-white;
-		}
-	}
-}
-.btn-danger {
-	background: $brand-danger;
-	color: $brand-white;
-	border: 2px solid $brand-danger;
-	&:hover, &:focus, &:active {
-		background: darken($brand-danger, 5%)!important;
-		border-color: darken($brand-danger, 5%)!important;
-	}
-	&.btn-outline {
-		background: transparent;
-		color: $brand-danger;
-		border: 2px solid $brand-danger;
-		&:hover, &:focus, &:active {
-			background: $brand-danger;
-			color: $brand-white;
-		}
-	}
-}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-info;
+// 		border: 2px solid $brand-info;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-info;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-warning {
+// 	background: $brand-warning;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-warning;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-warning, 5%)!important;
+// 		border-color: darken($brand-warning, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-warning;
+// 		border: 2px solid $brand-warning;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-warning;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-danger {
+// 	background: $brand-danger;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-danger;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-danger, 5%)!important;
+// 		border-color: darken($brand-danger, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-danger;
+// 		border: 2px solid $brand-danger;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-danger;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
 
-.btn-outline {
-	background: none;
-	border: 2px solid lighten($brand-black, 50%);
-	font-size: 12px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	@include transition(.3s);
-	&:hover, &:focus, &:active {
-		box-shadow: none;
-	}
-}
+// .btn-outline {
+// 	background: none;
+// 	border: 2px solid lighten($brand-black, 50%);
+// 	font-size: 12px;
+// 	letter-spacing: 2px;
+// 	text-transform: uppercase;
+// 	@include transition(.3s);
+// 	&:hover, &:focus, &:active {
+// 		box-shadow: none;
+// 	}
+// }
 
-// Form Input Field
-.form-control {
-	box-shadow: none;
-	background: transparent;
-	border: 2px solid rgba(0, 0, 0, 0.1);
-	height: 54px;
-	font-size: 18px;
-	font-weight: 300;
-  	&:active, &:focus {
-  		outline: none;
-		box-shadow: none;
-		border-color: $brand-primary;
-  }
-}
+// // Form Input Field
+// .form-control {
+// 	box-shadow: none;
+// 	background: transparent;
+// 	border: 2px solid rgba(0, 0, 0, 0.1);
+// 	height: 54px;
+// 	font-size: 18px;
+// 	font-weight: 300;
+//   	&:active, &:focus {
+//   		outline: none;
+// 		box-shadow: none;
+// 		border-color: $brand-primary;
+//   }
+// }
 
 /*
- * Flexslider
+ * Home
  */
-#fh5co-home {
+#kkl-home {
 	min-height: 700px;
-	background: $brand-white url(../images/2.jpg) no-repeat center center;
+	background: $brand-white url(../images/res-img-2.jpg) no-repeat center center;
 
 	.flexslider {
 		border: none;
@@ -284,7 +280,7 @@ p {
 		margin-bottom: 0;
 
 
-		.fh5co-text {
+		.kkl-text {
 			position: absolute;
 			z-index: 3;
 			width: 100%;
@@ -340,7 +336,7 @@ p {
 				background-size: cover;
 			}
 		}
-		.fh5co-overlay {
+		.kkl-overlay {
 			position: absolute;
 			z-index: 3;
 			top: 0;
@@ -357,10 +353,32 @@ p {
 		}
 	}
 }
-.fh5co-main-nav {
+
+.kkl-spacer {
+	position: relative;
+	padding: 10px;
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background: lighten($brand-black, 90%);
+	}
+	&:before {
+		top: 2px;
+	}
+	&:after {
+		bottom: 2px;
+	}
+	
+}
+
+.kkl-main-nav {
 	position: relative;
 	background: $brand-white;
-	&.fh5co-shadow {
+	&.kkl-shadow {
 		-webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, .3);
 		-moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, .3);
 		-ms-box-shadow: 0 0 7px 0 rgba(0, 0, 0, .3);
@@ -382,12 +400,13 @@ p {
 	&:after {
 		bottom: 2px;
 	}
-	.fh5co-menu-1,
-	.fh5co-menu-2,
-	.fh5co-logo {
+	.kkl-menu-1,
+	.kkl-menu-2,
+	.kkl-logo {
 		vertical-align: middle;
 		float: left;
 		line-height: 0;
+		font-size: 2rem;
 		a {
 			padding: 35px 10px;
 			color: #130d08;
@@ -398,20 +417,21 @@ p {
 			}
 			&.active {
 				color: $brand-primary;
+				font-weight: 400;
 			}
 		}
 	}
-	.fh5co-menu-1 {
+	.kkl-menu-1 {
 		text-align: right;
 		width: 40.33%;
 		a {
 			vertical-align: middle;
 		}
 	}
-	.fh5co-logo {
+	.kkl-logo {
 		text-align: center;
 		width: 19.33%;
-		font-size: 40px;
+		font-size: 4.5rem;
 		font-family:  $font-primary;
 		font-weight: 700;
 		font-style: italic;
@@ -422,7 +442,7 @@ p {
 			// padding: 25px 10px;
 		}
 	}
-	.fh5co-menu-2 {
+	.kkl-menu-2 {
 		text-align: left;
 		width: 40.33%;
 	}
@@ -463,21 +483,21 @@ p {
 
 
 
-#fh5co-about {
+#kkl-about {
 	@include flex;
 	@include flexwrap;
 	background: lighten($brand-black, 90%);
 	width: 100%;
-	.fh5co-2col {
+	.kkl-2col {
 		width: 50%;
 		@media screen and (max-width: $screen-lg) {
 			width: 100%;
 		}
 	}
-	.fh5co-text {
+	.kkl-text {
 		padding: 2em 6em;
 		text-align: left;
-		background: #130d08 url(../images/../images/pink-candystripes.jpg) repeat;
+		background: #130d08 url(../images/pink-candystripes.jpg) repeat;
 		@media screen and (max-width: $screen-lg) {
 			padding: 1em;
 		}
@@ -507,11 +527,12 @@ p {
 
 			line-height: 2;
 			color: $brand-pink-dark;
-			span.firstcharacter { float: left;
-				font-size: 75px;
+			span.firstcharacter { 
+				float: left;
+				font-size: 4rem;
 				line-height: 60px;
 				padding-top: 4px;
-				padding-right: 10px;
+				padding-right: 3px;
 				padding-left: 3px;
 				font-style: italic;
 				top: -20px;
@@ -521,7 +542,7 @@ p {
 			}
 		}
 	}
-	.fh5co-bg {
+	.kkl-bg {
 		background-repeat: no-repeat;
 		background-size: cover;
 		@media screen and (max-width: $screen-lg) {
@@ -1180,22 +1201,22 @@ p {
 		}
 	}
 
-	@include fh5co-translate(-275px);
+	@include kkl-translate(-275px);
 	@media screen and (max-width: $screen-sm) {
 		display: block;
 	}
 	@include transition(.9s);
 	.offcanvas-visible & {
-		@include fh5co-translate(0px);
+		@include kkl-translate(0px);
 		@include transition(.5s);
 	}
 }
 #fh5co-container, #fh5co-footer, .fh5co-nav-toggle {
 	@media screen and (max-width: $screen-sm) {
-		@include fh5co-translate(0px);
+		@include kkl-translate(0px);
 	}
 	.offcanvas-visible & {
-		@include fh5co-translate(275px);
+		@include kkl-translate(275px);
 	}
 }
 
