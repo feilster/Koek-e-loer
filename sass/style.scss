@@ -10,7 +10,7 @@ $padding-base-vertical: 14px !default;
 // $brand-primary: #52d3aa !default;
 // $brand-secondary: #3f95ea !default;
 
-$brand-primary: #a21360 !default;
+$brand-primary: #ee0c88 !default;
 $brand-success: #58ca7e !default;
 $brand-info: #1784fb !default;
 $brand-warning: #fed330 !default;
@@ -18,7 +18,7 @@ $brand-danger: #fb4f59 !default;
 
 $brand-white: #fff !default;
 $brand-black: #000 !default;
-$brand-pink: #a21360 !default;
+$brand-pink: #f11890 !default;
 $brand-pink-dark: #461630 !default;
 
 
@@ -103,168 +103,75 @@ body {
 	font-weight: 300;
 	line-height: 2;
 	color: #5e493a;
-	&.fh5co-overflow {
+	&.kkl-overflow {
 		overflow-x: auto;
 	}
 }
 
-// a {
-// 	color: $brand-primary;
-// 	@include transition(.5s);
-// 	&:hover, &:focus, &:active {
-// 		color: darken($brand-primary, 15%);
-// 	}
-// }
+.heading {
+	position: relative;
+	color: $brand-pink;
+	font-style: italic;
+	
+	margin-bottom: 20px;
+	text-align: center;
+	margin-top: 120px;
+	@media screen and (max-width :$screen-sm) {
+		font-size: 30px;
+	}
+	&:before, &::before {
+		position: absolute;
+		margin-top: -120px;
+		height: 100px;
+		width:70px;
+		content: "";
+		left: 50%;
+		top: 0;
+		margin-left: -35px;
+	}
+	&:after, &::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 0px;
+		height: 2px;
+		left: 50%;
+		background: $brand-pink;
+		margin-left: -20px;
+	}
+}
 
-// h1, h2, h3, h4, h5, h6 {
-// 	font-family: $font-primary;
-// 	color: $brand-black;
-// }
-// p {
-// 	margin-bottom: 30px;
-// }
+.kkl-heading {
+	background: rgba(235, 134, 221, 0.2); /* Green background with 30% opacity */
+	padding: 10px;
+}
 
+.sub-heading {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 30px;
+	@media screen and (max-width :$screen-sm) {
+		font-size: 18px;
+	}
+}
 
-// // Buttons
-// .btn {
-// 	margin-right: 4px;
-// 	margin-bottom: 4px;
-// 	font-family: $font-primary;
-// 	font-size: 12px;
-// 	letter-spacing: 2px;
-// 	text-transform: uppercase;
-// 	font-weight: 700;
-// 	@include border-radius(4px);
-// 	@include transition(.5s);
-// 	&.btn-md {
-// 		padding: 10px 20px!important;
-// 	}
-// 	&.btn-lg {
-// 		padding: 18px 36px!important;
-// 	}
-// 	&:hover, &:active, &:focus {
-// 		box-shadow: none!important;
-// 		outline: none!important;
-// 	}
-// }
-// .btn-primary {
-// 	background: $brand-primary;
-// 	color: $brand-white;
-// 	border: 2px solid $brand-primary;
-// 	&:hover, &:focus, &:active {
-// 		background: darken($brand-primary, 5%)!important;
-// 		border-color: darken($brand-primary, 5%)!important;
-// 	}
-// 	&.btn-outline {
-// 		background: transparent;
-// 		color: $brand-primary;
-// 		border: 2px solid $brand-primary;
-// 		&:hover, &:focus, &:active {
-// 			background: $brand-primary;
-// 			color: $brand-white;
-// 		}
-// 	}
-// }
-// .btn-success {
-// 	background: $brand-success;
-// 	color: $brand-white;
-// 	border: 2px solid $brand-success;
-// 	&:hover, &:focus, &:active {
-// 		background: darken($brand-success, 5%)!important;
-// 		border-color: darken($brand-success, 5%)!important;
-// 	}
-// 	&.btn-outline {
-// 		background: transparent;
-// 		color: $brand-success;
-// 		border: 2px solid $brand-success;
-// 		&:hover, &:focus, &:active {
-// 			background: $brand-success;
-// 			color: $brand-white;
-// 		}
-// 	}
-// }
-// .btn-info {
-// 	background: $brand-info;
-// 	color: $brand-white;
-// 	border: 2px solid $brand-info;
-// 	&:hover, &:focus, &:active {
-// 		background: darken($brand-info, 5%)!important;
-// 		border-color: darken($brand-info, 5%)!important;
-// 	}
+.first-character { 
+	float: left;
+	font-size: 4rem;
+	line-height: 60px;
+	padding-top: 4px;
+	padding-right: 3px;
+	padding-left: 3px;
+	font-style: italic;
+	top: -20px;
+	position: relative;
+	color: $brand-pink;
+	font-family: $font-primary;
+}
 
-// 	&.btn-outline {
-// 		background: transparent;
-// 		color: $brand-info;
-// 		border: 2px solid $brand-info;
-// 		&:hover, &:focus, &:active {
-// 			background: $brand-info;
-// 			color: $brand-white;
-// 		}
-// 	}
-// }
-// .btn-warning {
-// 	background: $brand-warning;
-// 	color: $brand-white;
-// 	border: 2px solid $brand-warning;
-// 	&:hover, &:focus, &:active {
-// 		background: darken($brand-warning, 5%)!important;
-// 		border-color: darken($brand-warning, 5%)!important;
-// 	}
-// 	&.btn-outline {
-// 		background: transparent;
-// 		color: $brand-warning;
-// 		border: 2px solid $brand-warning;
-// 		&:hover, &:focus, &:active {
-// 			background: $brand-warning;
-// 			color: $brand-white;
-// 		}
-// 	}
-// }
-// .btn-danger {
-// 	background: $brand-danger;
-// 	color: $brand-white;
-// 	border: 2px solid $brand-danger;
-// 	&:hover, &:focus, &:active {
-// 		background: darken($brand-danger, 5%)!important;
-// 		border-color: darken($brand-danger, 5%)!important;
-// 	}
-// 	&.btn-outline {
-// 		background: transparent;
-// 		color: $brand-danger;
-// 		border: 2px solid $brand-danger;
-// 		&:hover, &:focus, &:active {
-// 			background: $brand-danger;
-// 			color: $brand-white;
-// 		}
-// 	}
-// }
-
-// .btn-outline {
-// 	background: none;
-// 	border: 2px solid lighten($brand-black, 50%);
-// 	font-size: 12px;
-// 	letter-spacing: 2px;
-// 	text-transform: uppercase;
-// 	@include transition(.3s);
-// 	&:hover, &:focus, &:active {
-// 		box-shadow: none;
-// 	}
-// }
-
-// // Form Input Field
-// .form-control {
-// 	box-shadow: none;
-// 	background: transparent;
-// 	border: 2px solid rgba(0, 0, 0, 0.1);
-// 	height: 54px;
-// 	font-size: 18px;
-// 	font-weight: 300;
-//   	&:active, &:focus {
-//   		outline: none;
-// 		box-shadow: none;
-// 		border-color: $brand-primary;
-//   }
-// }
+.ug-textpanel-title {
+	display: none !important;
+}
 
 /*
  * Home
@@ -450,44 +357,18 @@ body {
 
 }
 
-.fh5co-heading {
-	.heading {
-		font-size: 50px;
-		font-style: italic;
-		position: relative;
-		padding-bottom: 30px;
-		margin-bottom: 30px;
-		@media screen and (max-width :$screen-sm) {
-			font-size: 30px;
-		}
-		&:after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			width: 40px;
-			height: 2px;
-			left: 50%;
-			background: #fb6e14;
-			margin-left: -20px;
-		}
-	}
-	.sub-heading {
-		font-size: 20px;
-		line-height: 1.5;
-		margin-bottom: 30px;
-		@media screen and (max-width :$screen-sm) {
-			font-size: 18px;
-		}
-	}
-}
-
-
-
 #kkl-about {
 	@include flex;
 	@include flexwrap;
 	background: lighten($brand-black, 90%);
 	width: 100%;
+	.heading {
+		&:before, &::before {
+			background: url(../images/cupcakes2-sm.png) no-repeat;
+			width:80px;
+			margin-left: -40px;
+		}
+	}
 	.kkl-2col {
 		width: 50%;
 		@media screen and (max-width: $screen-lg) {
@@ -497,49 +378,17 @@ body {
 	.kkl-text {
 		padding: 2em 6em;
 		text-align: left;
-		background: #130d08 url(../images/pink-candystripes.jpg) repeat;
+		background: #130d08 url(../images/pink-candystripes1.jpg) repeat;
 		@media screen and (max-width: $screen-lg) {
 			padding: 1em;
 		}
 		.btn {
 			color: $brand-white;
 		}
-		.heading {
-			margin-bottom: 30px;
-			color: $brand-pink;
-			font-style: italic;
-			font-weight: 300;
-			position: relative;
-			padding-bottom: 30px;
-			text-align: center;
-			&:after {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				width: 40px;
-				height: 2px;
-				left: 50%;
-				background: $brand-pink;
-				margin-left: -20px;
-			}
-		}
 		p {
 
 			line-height: 2;
 			color: $brand-pink-dark;
-			span.firstcharacter { 
-				float: left;
-				font-size: 4rem;
-				line-height: 60px;
-				padding-top: 4px;
-				padding-right: 3px;
-				padding-left: 3px;
-				font-style: italic;
-				top: -20px;
-				position: relative;
-				color: $brand-pink;
-				font-family: $font-primary;
-			}
 		}
 	}
 	.kkl-bg {
@@ -556,101 +405,98 @@ body {
 	}
 }
 
-#fh5co-sayings {
+#kkl-type {
 	padding: 7em 0;
-	@media screen and (max-width :$screen-sm) {
-		padding: 5em 0;
-	}
-	.flexslider {
-		.slides {
-			li {
-				font-size: 40px;
-				line-height: 1.5;
-				blockquote {
-					padding-left: 0;
-					border-left: none;
-					@media screen and (max-width: $screen-sm) {
-						padding: 0 20px;
-					}
-					p {
-						font-size: 40px;
-						line-height: 1.5;
-						@media screen and (max-width: $screen-sm) {
-							font-size: 20px;
-							line-height: 1.5;
-						}
-						&.quote-author {
-							font-size: 20px;
-							color: lighten($brand-black, 50%);
-							@media screen and (max-width: $screen-sm) {
-								font-size: 18px;
-							}
-						}
-					}
-				}
-			}
-		}
-		.flex-control-paging {
-			position: relative;
-			&.flex-control-nav {
-				bottom: -70px;
-				@media screen and (max-width: $screen-sm) {
-					bottom: -60px;
-				}
-			}
-			li {
-				a {
+	background-color: transparent;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
 
-					width: 14px;
-					height: 14px;
-					background: rgba(0,0,0,.2);
-					box-shadow: none;
-					&:active, &:focus {
-						outline: none;
-					}
-					&.flex-active {
-						top: 2px;
-						position: relative;
-						background: transparent;
-						box-shadow: none;
-						border: 2px solid $brand-primary;
-					}
+	> .kkl-overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, .7);
+		z-index: 9;
+	}
+	> .container {
+		z-index: 10;
+		position: relative;
+	}
+
+	.kkl-type {
+		float: left;
+		width: 100%;
+		text-align: center;
+		@media screen and (max-width: $screen-sm) {
+			margin-bottom: 30px;
+		}
+	}
+	h3 {
+		margin-bottom: 30px;
+		font-style: italic;
+		color: $brand-white;
+		font-size: 40px;
+		text-align: center;
+		padding-top: 110px;
+		&.with-icon {
+			// padding-top: 50px;
+			position: relative;
+			&:before, &::before {
+				// padding-top: 50px;
+				content: "";
+				position: absolute;
+				left: 50%;
+				margin-left: -54px;
+				margin-top: -125px;
+				width: 104px;
+				height: 104px;
+				border: 2px solid rgba(255,255,255,.2);
+				@include border-radius(50%);
+			}
+			&.icon-1 {
+				&:before, &::before {
+					background: url(../images/type-birthdays.png) no-repeat center center;
 				}
 			}
+			&.icon-2 {
+				&:before, &::before {
+					background: url(../images/type-wedding.png) no-repeat center center;
+				}
+			}
+			&.icon-3 {
+				&:before, &::before {
+					background: url(../images/type-parties.png) no-repeat center center;
+				}
+			}
+			&.icon-4 {
+				&:before, &::before {
+					background: url(../images/type-events.png) no-repeat center center;
+				}
+			}
+
 		}
+	}
+	p {
+		color: rgba(255,255,255,.7);
 	}
 }
 
-#fh5co-featured {
-	padding: 7em 0;
-	background: #130d08 url(../images/../images/pink-candystripes.jpg) repeat;
+#kkl-gallery {
+	padding: 2em 0;
+	background: #130d08 url(../images/pink-candystripes1.jpg) repeat;
 	@media screen and (max-width :$screen-sm) {
 		padding: 5em 0;
 	}
-	.fh5co-heading {
-		.heading {
-			position: relative;
-			padding-top: 30px !important;
-			color: $brand-white;
-			&:before, &::before {
-				height: 64px;
-				width: 64px;
-				position: absolute;
-				content: "";
-				background: url(../images/0301-pina-colada_64.png) no-repeat;
-				top: 0;
-				left: 50%;
-				margin-top: -50px;
-				margin-left: -32px;
-			}
-
-		}
-		.sub-heading {
-			color: #a99c92;
+	.heading {
+		&:before, &::before {
+			background: url(../images/cupcakes1-sm.png) no-repeat;
 		}
 	}
 
-	.fh5co-grid {
+	.kkl-grid {
 		@include flex;
 		@include flexwrap;
 		h2 {
@@ -746,7 +592,7 @@ body {
 
 			}
 		}
-		> .fh5co-v-half {
+		> .kkl-v-half {
 			width: 50%;
 			text-align: center;
 			position: relative;
@@ -755,10 +601,10 @@ body {
 			@media screen and (max-width: $screen-md) {
 				width: 100%;
 			}
-			.fh5co-text {
+			.kkl-text {
 				background: #f5f5f5;
 			}
-			.fh5co-special-1 {
+			.kkl-special-1 {
 				background: #faebcd;
 				&.arrow-left {
 					&:before, &::before {
@@ -774,11 +620,11 @@ body {
 
 
 			}
-			> .fh5co-v-col-2 {
+			> .kkl-v-col-2 {
 				width: 50%;
 				padding: 20px;
 				position: relative;
-				&.fh5co-bg-img {
+				&.kkl-bg-img {
 					background-size: cover;
 					background-repeat: no-repeat;
 					background-position: center center;
@@ -791,19 +637,19 @@ body {
 				}
 
 			}
-			> .fh5co-h-row-2 {
+			> .kkl-h-row-2 {
 				width: 100%;
 				position: relative;
 				@include flex;
 				@include flexwrap;
-				> .fh5co-v-col-2 {
+				> .kkl-v-col-2 {
 					width: 50%;
 					position: relative;
 					padding: 20px;
 					@media screen and (max-width: $screen-sm) {
 						width: 100%;
 					}
-					&.fh5co-bg-img {
+					&.kkl-bg-img {
 						background-size: cover;
 						background-repeat: no-repeat;
 						background-position: center center;
@@ -812,8 +658,8 @@ body {
 						}
 					}
 				}
-				&.fh5co-reversed {
-					.fh5co-bg-img {
+				&.kkl-reversed {
+					.kkl-bg-img {
 						position: absolute;
 						right: 0;
 						bottom: 0;
@@ -829,240 +675,10 @@ body {
 			}
 		}
 	}
-
 }
 
-#fh5co-menus {
-	padding: 7em 0;
-	@media screen and (max-width :$screen-sm) {
-		padding: 5em 0;
-	}
-
-	.fh5co-heading {
-		.heading {
-			position: relative;
-			padding-top: 30px !important;
-			// color: $brand-white;
-			&:before, &::before {
-				height: 64px;
-				width: 64px;
-				position: absolute;
-				content: "";
-				background: url(../images/0401-vegan.png) no-repeat;
-				top: 0;
-				left: 50%;
-				margin-top: -50px;
-				margin-left: -32px;
-			}
-
-		}
-		.sub-heading {
-			color: #a99c92;
-		}
-	}
-
-	.fh5co-food-menu {
-
-		float: left;
-		width: 100%;
-		margin-bottom: 30px;
-
-		@media screen and (max-width: $screen-sm) {
-			margin-bottom: 30px;
-			float: left;
-			width: 100%;
-			clear: none!important;
-		}
-		h2 {
-			margin-bottom: 50px;
-			font-style: italic;
-			position: relative;
-
-			&.fh5co-drinks {
-				padding-left: 50px;
-				&:before {
-					background: url(../images/0301-pina-colada.png) no-repeat;
-					content: "";
-					position: absolute;
-					top: -20px;
-					left: 0;
-					width: 64px;
-					height: 64px;
-				}
-			}
-			&.fh5co-dishes {
-				padding-left: 80px;
-				&:before {
-					background: url(../images/0302-steak.png) no-repeat;
-					content: "";
-					position: absolute;
-
-					top: 0;
-					left: 0;
-					width: 64px;
-					height: 45px;
-				}
-			}
-
-		}
-		ul {
-			padding: 0;
-			margin: 0;
-			li {
-				padding: 0 0 20px 0;
-				margin: 0 0 20px 0;
-				border-bottom: 1px dotted #ccc;
-				display: block;
-				float: left;
-				width: 100%;
-				.fh5co-food-desc {
-					clear: both;
-					float: left;
-					width: 80%;
-					> figure {
-						width: 20%;
-						float: left;
-						position: relative;
-						margin-right: 4%;
-						img {
-							max-width: 100%;
-							@include border-radius(4px);
-							margin-bottom: 0;
-						}
-					}
-					> div {
-
-						width: 75%;
-						float: left;
-						position: relative;
-						font-size: 14px;
-						line-height: 1.5;
-						p {
-							margin: 0;
-						}
-						h3 {
-							margin: 0 0 10px 0;
-							padding: 0;
-							font-size: 20px;
-							color: $brand-black;
-						}
-					}
-				}
-				.fh5co-food-pricing {
-					float: right;
-					width: 20%;
-					text-align: right;
-					font-size: 20px;
-					color: $brand-primary;
-				}
-
-			}
-		}
-	}
-}
-
-#fh5co-events {
-	padding: 7em 0;
-	background-color: transparent;
-	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
-	> .fh5co-overlay {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0, 0, 0, .7);
-		z-index: 9;
-	}
-	> .container {
-		z-index: 10;
-		position: relative;
-	}
-	.fh5co-heading {
-		.heading {
-			position: relative;
-			padding-top: 30px !important;
-			color: $brand-white;
-			&:before, &::before {
-				height: 64px;
-				width: 49px;
-				position: absolute;
-				content: "";
-				background: url(../images/0402-chef.png) no-repeat;
-				top: 0;
-				left: 50%;
-				margin-top: -50px;
-				margin-left: -24px;
-			}
-
-		}
-		.sub-heading {
-			color: #a99c92;
-		}
-	}
-
-	@media screen and (max-width :$screen-sm) {
-		padding: 5em 0;
-	}
-	.fh5co-event {
-		background: $brand-white;
-		padding: 50px;
-		text-align: center;
-		margin-bottom: 30px;
-		position: relative;
-		&:before {
-			border: 2px solid lighten($brand-black, 90%);
-			content: "";
-			position: absolute;
-			top: 15px;
-			bottom: 15px;
-			right: 15px;
-			left: 15px;
-			z-index: 0;
-		}
-		h3, .fh5co-event-meta, p, .btn {
-			position: relative;
-			z-index: 2;
-		}
-		h3 {
-			padding: 0;
-			margin: 0;
-		}
-		.fh5co-event-meta {
-			margin-bottom: 20px;
-			display: block;
-			color: lighten($brand-black, 50%);
-			position: relative;
-			padding-bottom: 10px;
-			&:after, &::after {
-				background: lighten($brand-black, 75%);
-				background: $brand-primary;
-				content: "";
-				position: absolute;
-				left: 50%;
-				bottom: 0;
-				width: 40px;
-				height: 2px;
-				margin-left: -20px;
-			}
-		}
-		p {
-			font-size: 16px;
-			line-height: 1.8;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		.btn {
-			margin-bottom: 0;
-		}
-	}
-}
-
-#fh5co-contact {
-	padding: 7em 0;
+#kkl-contact {
+	padding: 2em 0;
 	@media screen and (max-width :$screen-sm) {
 		padding: 5em 0;
 	}
@@ -1074,29 +690,15 @@ body {
 		padding: 5em 0;
 	}
 
-	.fh5co-heading {
-		.heading {
-			position: relative;
-			padding-top: 30px !important;
-			&:before, &::before {
-				height: 61px;
-				width: 61px;
-				position: absolute;
-				content: "";
-				background: url(../images/0203-coffee-love.png) no-repeat;
-				top: 0;
-				left: 50%;
-				margin-top: -50px;
-				margin-left: -24px;
-			}
-
-		}
-		.sub-heading {
-			color: #a99c92;
+	.heading {
+		&:before, &::before {
+			background: url(../images/cupcakes3-sm.png) no-repeat;
+			width:91px;
+			margin-left: -45px;
 		}
 	}
 
-	.fh5co-social {
+	.kkl-social {
 		padding: 0;
 		margin: 0;
 		li {
@@ -1105,7 +707,7 @@ body {
 
 		}
 	}
-	.fh5co-contact-info {
+	.kkl-contact-info {
 		padding: 0;
 		margin: 0 0 1.5em 0;
 		li {
@@ -1123,11 +725,8 @@ body {
 		}
 	}
 }
-#fh5co-container {
-	position: relative;
-	z-index: 10;
-}
-#fh5co-footer {
+
+#kkl-footer {
 	width: 100%;
 	background: rgba(0,0,0,.9);
 	padding: 7em 0;
@@ -1143,7 +742,7 @@ body {
 		position: relative;
 	}
 }
-.fh5co-social {
+.kkl-social {
 	padding: 0;
 	margin: 0;
 	li {
@@ -1166,16 +765,21 @@ body {
 }
 
 
+#kkl-container {
+	position: relative;
+	z-index: 10;
+}
 
-#fh5co-offcanvas, #fh5co-container, .fh5co-nav-toggle, #fh5co-footer {
+
+#kkl-offcanvas, #kkl-container, .kkl-nav-toggle, #kkl-footer {
 	@include transition(.5s);
 }
-#fh5co-container, .fh5co-nav-toggle, #fh5co-footer {
+#kkl-container, .kkl-nav-toggle, #kkl-footer {
 	z-index: 2;
 	position: relative;
 }
 
-#fh5co-offcanvas {
+#kkl-offcanvas {
 	display: block;
 	height: 100%;
 	left: 0;
@@ -1211,7 +815,7 @@ body {
 		@include transition(.5s);
 	}
 }
-#fh5co-container, #fh5co-footer, .fh5co-nav-toggle {
+#kkl-container, #kkl-footer, .kkl-nav-toggle {
 	@media screen and (max-width: $screen-sm) {
 		@include kkl-translate(0px);
 	}
@@ -1228,7 +832,7 @@ body {
 }
 
 // Burger Menu
-.fh5co-nav-toggle {
+.kkl-nav-toggle {
 
   cursor: pointer;
   text-decoration: none;
@@ -1264,22 +868,22 @@ body {
   }
 }
 
-.fh5co-nav-toggle i::before {
+.kkl-nav-toggle i::before {
   top: -7px;
 }
-.fh5co-nav-toggle i::after {
+.kkl-nav-toggle i::after {
   bottom: -7px;
 }
-.fh5co-nav-toggle:hover i::before {
+.kkl-nav-toggle:hover i::before {
   top: -10px;
 }
-.fh5co-nav-toggle:hover i::after {
+.kkl-nav-toggle:hover i::after {
   bottom: -10px;
 }
-.fh5co-nav-toggle.active i {
+.kkl-nav-toggle.active i {
 	background: transparent;
 }
-.fh5co-nav-toggle.active i::before {
+.kkl-nav-toggle.active i::before {
   top:0;
   -webkit-transform: rotateZ(45deg);
      -moz-transform: rotateZ(45deg);
@@ -1287,7 +891,7 @@ body {
        -o-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-.fh5co-nav-toggle.active i::after {
+.kkl-nav-toggle.active i::after {
   bottom:0;
   -webkit-transform: rotateZ(-45deg);
      -moz-transform: rotateZ(-45deg);
@@ -1295,7 +899,7 @@ body {
        -o-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
 }
-.fh5co-nav-toggle {
+.kkl-nav-toggle {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -1314,84 +918,6 @@ body {
 
 }
 
-#fh5co-type {
-	padding: 7em 0;
-	background-color: transparent;
-	background-size: cover;
-	background-attachment: fixed;
-	position: relative;
-
-	> .fh5co-overlay {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: rgba(0, 0, 0, .7);
-		z-index: 9;
-	}
-	> .container {
-		z-index: 10;
-		position: relative;
-	}
-
-	.fh5co-type {
-		float: left;
-		width: 100%;
-		text-align: center;
-		@media screen and (max-width: $screen-sm) {
-			margin-bottom: 30px;
-		}
-	}
-	h3 {
-		margin-bottom: 30px;
-		font-style: italic;
-		color: $brand-white;
-		font-size: 40px;
-		text-align: center;
-		padding-top: 110px;
-		&.with-icon {
-			// padding-top: 50px;
-			position: relative;
-			&:before, &::before {
-				// padding-top: 50px;
-				content: "";
-				position: absolute;
-				left: 50%;
-				margin-left: -54px;
-				margin-top: -125px;
-				width: 104px;
-				height: 104px;
-				border: 2px solid rgba(255,255,255,.2);
-				@include border-radius(50%);
-			}
-			&.icon-1 {
-				&:before, &::before {
-					background: url(../images/type-1.png) no-repeat center center;
-				}
-			}
-			&.icon-2 {
-				&:before, &::before {
-					background: url(../images/type-2.png) no-repeat center center;
-				}
-			}
-			&.icon-3 {
-				&:before, &::before {
-					background: url(../images/type-3.png) no-repeat center center;
-				}
-			}
-			&.icon-4 {
-				&:before, &::before {
-					background: url(../images/type-4.png) no-repeat center center;
-				}
-			}
-
-		}
-	}
-	p {
-		color: rgba(255,255,255,.7);
-	}
-}
 .to-animate,
 .to-animate-2 {
 	.js & {
@@ -1402,3 +928,458 @@ body {
 .row-padded {
 	padding-bottom: 40px;
 }
+
+
+// a {
+// 	color: $brand-primary;
+// 	@include transition(.5s);
+// 	&:hover, &:focus, &:active {
+// 		color: darken($brand-primary, 15%);
+// 	}
+// }
+
+// h1, h2, h3, h4, h5, h6 {
+// 	font-family: $font-primary;
+// 	color: $brand-black;
+// }
+// p {
+// 	margin-bottom: 30px;
+// }
+
+
+// // Buttons
+// .btn {
+// 	margin-right: 4px;
+// 	margin-bottom: 4px;
+// 	font-family: $font-primary;
+// 	font-size: 12px;
+// 	letter-spacing: 2px;
+// 	text-transform: uppercase;
+// 	font-weight: 700;
+// 	@include border-radius(4px);
+// 	@include transition(.5s);
+// 	&.btn-md {
+// 		padding: 10px 20px!important;
+// 	}
+// 	&.btn-lg {
+// 		padding: 18px 36px!important;
+// 	}
+// 	&:hover, &:active, &:focus {
+// 		box-shadow: none!important;
+// 		outline: none!important;
+// 	}
+// }
+// .btn-primary {
+// 	background: $brand-primary;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-primary;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-primary, 5%)!important;
+// 		border-color: darken($brand-primary, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-primary;
+// 		border: 2px solid $brand-primary;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-primary;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-success {
+// 	background: $brand-success;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-success;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-success, 5%)!important;
+// 		border-color: darken($brand-success, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-success;
+// 		border: 2px solid $brand-success;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-success;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-info {
+// 	background: $brand-info;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-info;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-info, 5%)!important;
+// 		border-color: darken($brand-info, 5%)!important;
+// 	}
+
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-info;
+// 		border: 2px solid $brand-info;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-info;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-warning {
+// 	background: $brand-warning;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-warning;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-warning, 5%)!important;
+// 		border-color: darken($brand-warning, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-warning;
+// 		border: 2px solid $brand-warning;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-warning;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+// .btn-danger {
+// 	background: $brand-danger;
+// 	color: $brand-white;
+// 	border: 2px solid $brand-danger;
+// 	&:hover, &:focus, &:active {
+// 		background: darken($brand-danger, 5%)!important;
+// 		border-color: darken($brand-danger, 5%)!important;
+// 	}
+// 	&.btn-outline {
+// 		background: transparent;
+// 		color: $brand-danger;
+// 		border: 2px solid $brand-danger;
+// 		&:hover, &:focus, &:active {
+// 			background: $brand-danger;
+// 			color: $brand-white;
+// 		}
+// 	}
+// }
+
+// .btn-outline {
+// 	background: none;
+// 	border: 2px solid lighten($brand-black, 50%);
+// 	font-size: 12px;
+// 	letter-spacing: 2px;
+// 	text-transform: uppercase;
+// 	@include transition(.3s);
+// 	&:hover, &:focus, &:active {
+// 		box-shadow: none;
+// 	}
+// }
+
+// // Form Input Field
+// .form-control {
+// 	box-shadow: none;
+// 	background: transparent;
+// 	border: 2px solid rgba(0, 0, 0, 0.1);
+// 	height: 54px;
+// 	font-size: 18px;
+// 	font-weight: 300;
+//   	&:active, &:focus {
+//   		outline: none;
+// 		box-shadow: none;
+// 		border-color: $brand-primary;
+//   }
+// }
+
+// #kkl-sayings {
+// 	padding: 7em 0;
+// 	@media screen and (max-width :$screen-sm) {
+// 		padding: 5em 0;
+// 	}
+// 	.flexslider {
+// 		.slides {
+// 			li {
+// 				font-size: 40px;
+// 				line-height: 1.5;
+// 				blockquote {
+// 					padding-left: 0;
+// 					border-left: none;
+// 					@media screen and (max-width: $screen-sm) {
+// 						padding: 0 20px;
+// 					}
+// 					p {
+// 						font-size: 40px;
+// 						line-height: 1.5;
+// 						@media screen and (max-width: $screen-sm) {
+// 							font-size: 20px;
+// 							line-height: 1.5;
+// 						}
+// 						&.quote-author {
+// 							font-size: 20px;
+// 							color: lighten($brand-black, 50%);
+// 							@media screen and (max-width: $screen-sm) {
+// 								font-size: 18px;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 		.flex-control-paging {
+// 			position: relative;
+// 			&.flex-control-nav {
+// 				bottom: -70px;
+// 				@media screen and (max-width: $screen-sm) {
+// 					bottom: -60px;
+// 				}
+// 			}
+// 			li {
+// 				a {
+
+// 					width: 14px;
+// 					height: 14px;
+// 					background: rgba(0,0,0,.2);
+// 					box-shadow: none;
+// 					&:active, &:focus {
+// 						outline: none;
+// 					}
+// 					&.flex-active {
+// 						top: 2px;
+// 						position: relative;
+// 						background: transparent;
+// 						box-shadow: none;
+// 						border: 2px solid $brand-primary;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// #kkl-menus {
+// 	padding: 7em 0;
+// 	@media screen and (max-width :$screen-sm) {
+// 		padding: 5em 0;
+// 	}
+
+// 	.kkl-heading {
+// 		.heading {
+// 			position: relative;
+// 			padding-top: 30px !important;
+// 			// color: $brand-white;
+// 			&:before, &::before {
+// 				height: 64px;
+// 				width: 64px;
+// 				position: absolute;
+// 				content: "";
+// 				background: url(../images/0401-vegan.png) no-repeat;
+// 				top: 0;
+// 				left: 50%;
+// 				margin-top: -50px;
+// 				margin-left: -32px;
+// 			}
+
+// 		}
+// 		.sub-heading {
+// 			color: #a99c92;
+// 		}
+// 	}
+
+// 	.kkl-food-menu {
+
+// 		float: left;
+// 		width: 100%;
+// 		margin-bottom: 30px;
+
+// 		@media screen and (max-width: $screen-sm) {
+// 			margin-bottom: 30px;
+// 			float: left;
+// 			width: 100%;
+// 			clear: none!important;
+// 		}
+// 		h2 {
+// 			margin-bottom: 50px;
+// 			font-style: italic;
+// 			position: relative;
+
+// 			&.kkl-drinks {
+// 				padding-left: 50px;
+// 				&:before {
+// 					background: url(../images/0301-pina-colada.png) no-repeat;
+// 					content: "";
+// 					position: absolute;
+// 					top: -20px;
+// 					left: 0;
+// 					width: 64px;
+// 					height: 64px;
+// 				}
+// 			}
+// 			&.kkl-dishes {
+// 				padding-left: 80px;
+// 				&:before {
+// 					background: url(../images/0302-steak.png) no-repeat;
+// 					content: "";
+// 					position: absolute;
+
+// 					top: 0;
+// 					left: 0;
+// 					width: 64px;
+// 					height: 45px;
+// 				}
+// 			}
+
+// 		}
+// 		ul {
+// 			padding: 0;
+// 			margin: 0;
+// 			li {
+// 				padding: 0 0 20px 0;
+// 				margin: 0 0 20px 0;
+// 				border-bottom: 1px dotted #ccc;
+// 				display: block;
+// 				float: left;
+// 				width: 100%;
+// 				.kkl-food-desc {
+// 					clear: both;
+// 					float: left;
+// 					width: 80%;
+// 					> figure {
+// 						width: 20%;
+// 						float: left;
+// 						position: relative;
+// 						margin-right: 4%;
+// 						img {
+// 							max-width: 100%;
+// 							@include border-radius(4px);
+// 							margin-bottom: 0;
+// 						}
+// 					}
+// 					> div {
+
+// 						width: 75%;
+// 						float: left;
+// 						position: relative;
+// 						font-size: 14px;
+// 						line-height: 1.5;
+// 						p {
+// 							margin: 0;
+// 						}
+// 						h3 {
+// 							margin: 0 0 10px 0;
+// 							padding: 0;
+// 							font-size: 20px;
+// 							color: $brand-black;
+// 						}
+// 					}
+// 				}
+// 				.kkl-food-pricing {
+// 					float: right;
+// 					width: 20%;
+// 					text-align: right;
+// 					font-size: 20px;
+// 					color: $brand-primary;
+// 				}
+
+// 			}
+// 		}
+// 	}
+// }
+
+// #kkl-events {
+// 	padding: 7em 0;
+// 	background-color: transparent;
+// 	background-size: cover;
+// 	background-attachment: fixed;
+// 	position: relative;
+// 	> .kkl-overlay {
+// 		position: absolute;
+// 		top: 0;
+// 		bottom: 0;
+// 		left: 0;
+// 		right: 0;
+// 		background: rgba(0, 0, 0, .7);
+// 		z-index: 9;
+// 	}
+// 	> .container {
+// 		z-index: 10;
+// 		position: relative;
+// 	}
+// 	.kkl-heading {
+// 		.heading {
+// 			position: relative;
+// 			padding-top: 30px !important;
+// 			color: $brand-white;
+// 			&:before, &::before {
+// 				height: 64px;
+// 				width: 49px;
+// 				position: absolute;
+// 				content: "";
+// 				background: url(../images/0402-chef.png) no-repeat;
+// 				top: 0;
+// 				left: 50%;
+// 				margin-top: -50px;
+// 				margin-left: -24px;
+// 			}
+
+// 		}
+// 		.sub-heading {
+// 			color: #a99c92;
+// 		}
+// 	}
+
+// 	@media screen and (max-width :$screen-sm) {
+// 		padding: 5em 0;
+// 	}
+// 	.kkl-event {
+// 		background: $brand-white;
+// 		padding: 50px;
+// 		text-align: center;
+// 		margin-bottom: 30px;
+// 		position: relative;
+// 		&:before {
+// 			border: 2px solid lighten($brand-black, 90%);
+// 			content: "";
+// 			position: absolute;
+// 			top: 15px;
+// 			bottom: 15px;
+// 			right: 15px;
+// 			left: 15px;
+// 			z-index: 0;
+// 		}
+// 		h3, .kkl-event-meta, p, .btn {
+// 			position: relative;
+// 			z-index: 2;
+// 		}
+// 		h3 {
+// 			padding: 0;
+// 			margin: 0;
+// 		}
+// 		.kkl-event-meta {
+// 			margin-bottom: 20px;
+// 			display: block;
+// 			color: lighten($brand-black, 50%);
+// 			position: relative;
+// 			padding-bottom: 10px;
+// 			&:after, &::after {
+// 				background: lighten($brand-black, 75%);
+// 				background: $brand-primary;
+// 				content: "";
+// 				position: absolute;
+// 				left: 50%;
+// 				bottom: 0;
+// 				width: 40px;
+// 				height: 2px;
+// 				margin-left: -20px;
+// 			}
+// 		}
+// 		p {
+// 			font-size: 16px;
+// 			line-height: 1.8;
+// 			&:last-child {
+// 				margin-bottom: 0;
+// 			}
+// 		}
+// 		.btn {
+// 			margin-bottom: 0;
+// 		}
+// 	}
+// }
+
+

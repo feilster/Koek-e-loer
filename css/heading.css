@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:900|Fredericka+the+Great|Oswald:700|Vidaloka);
+
+.quote {
+    margin: 2rem auto;  
+    width: 20.5rem;
+}
+
+span {
+    display: block;
+    text-rendering: optimizeLegibility; /* Better kerning, worse performance */
+}
+
+.line2 {
+    font-size: 3.25rem;
+    font-style: italic;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #f75cb6;
+    text-shadow: -1px  1px 0 #41e99b,
+    -2px  2px 0 #b272c0, 
+    -3px  3px 0 #e6380c, 
+    -4px  4px 0 #8055eb;
+}
+
+cite {
+    font: 0.85rem 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: #222;
+}

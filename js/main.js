@@ -42,7 +42,7 @@
 	};
 
 	var sliderSayings = function() {
-		$('#fh5co-sayings .flexslider').flexslider({
+		$('#kkl-sayings .flexslider').flexslider({
 			animation: "slide",
 			slideshowSpeed: 5000,
 			directionNav: false,
@@ -53,17 +53,17 @@
 	}
 
 	var offcanvasMenu = function() {
-		$('body').prepend('<div id="fh5co-offcanvas" />');
-		$('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>');
+		$('body').prepend('<div id="kkl-offcanvas" />');
+		$('body').prepend('<a href="#" class="js-kkl-nav-toggle kkl-nav-toggle"><i></i></a>');
 
-		$('.kkl-main-nav .fh5co-menu-1 a, .kkl-main-nav .fh5co-menu-2 a').each(function(){
+		$('.kkl-main-nav .kkl-menu-1 a, .kkl-main-nav .kkl-menu-2 a').each(function(){
 
 			var $this = $(this);
 
-			$('#fh5co-offcanvas').append($this.clone());
+			$('#kkl-offcanvas').append($this.clone());
 
 		});
-		// $('#fh5co-offcanvas').append
+		// $('#kkl-offcanvas').append
 	};
 
 	var mainMenuSticky = function() {
@@ -86,7 +86,7 @@
 			    		'top' : 0,
 			    		'width' : '100%',
 			    		'z-index' : 99999
-			    	}).addClass('fh5co-shadow');;
+			    	}).addClass('kkl-shadow');;
 
 			}
 
@@ -96,7 +96,7 @@
 
 		$('.js-sticky').waypoint(function(direction) {
 		  	if (direction === 'up') {
-		    	$section.attr('style', '').removeClass('fh5co-shadow');
+		    	$section.attr('style', '').removeClass('kkl-shadow');
 		  	}
 		}, {
 		  	offset: function() { return -$(this.element).height() + 69; }
@@ -115,11 +115,11 @@
 	// Burger Menu
 	var burgerMenu = function() {
 
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
+		$('body').on('click', '.js-kkl-nav-toggle', function(event){
 
 			var $this = $(this);
 
-			$('body').toggleClass('fh5co-overflow offcanvas-visible');
+			$('body').toggleClass('kkl-overflow offcanvas-visible');
 			$this.toggleClass('active');
 			event.preventDefault();
 
@@ -134,19 +134,19 @@
 			var scrollPos = $(this).scrollTop();
 
 
-			$('#kkl-home .fh5co-text').css({
+			$('#kkl-home .kkl-text').css({
 		      'opacity' : 1-(scrollPos/300),
 		      'margin-top' : (-212) + (scrollPos/1)
 		   });
 
-		   $('#kkl-home .flexslider .fh5co-overlay').css({
+		   $('#kkl-home .flexslider .kkl-overlay').css({
 				'opacity' : (.5)+(scrollPos/2000)
 		   });
 
 		   if (scrollPos > 300) {
-				$('#kkl-home .fh5co-text').css('display', 'none');
+				$('#kkl-home .kkl-text').css('display', 'none');
 			} else {
-				$('#kkl-home .fh5co-text').css('display', 'block');
+				$('#kkl-home .kkl-text').css('display', 'block');
 			}
 		   
 
@@ -155,7 +155,7 @@
 		$(window).resize(function() {
 			if ( $('body').hasClass('offcanvas-visible') ) {
 		   	$('body').removeClass('offcanvas-visible');
-		   	$('.js-fh5co-nav-toggle').removeClass('active');
+		   	$('.js-kkl-nav-toggle').removeClass('active');
 		   }
 		});
 		
@@ -185,7 +185,7 @@
 		$(window).resize(function(){
 			topVal = ( $(window).width() < 769 ) ? 0 : 58;		
 		});
-		$('.kkl-main-nav a:not([class="external"]), #fh5co-offcanvas a:not([class="external"])').click(function(event){
+		$('.kkl-main-nav a:not([class="external"]), #kkl-offcanvas a:not([class="external"])').click(function(event){
 			var section = $(this).data('nav-section');
 
 				if ( $('div[data-section="' + section + '"]').length ) {
@@ -207,8 +207,8 @@
 	// Reflect scrolling in navigation
 	var navActive = function(section) {
 		
-		$('.kkl-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active');
-		$('.kkl-main-nav, #fh5co-offcanvas').find('a[data-nav-section="'+section+'"]').addClass('active');
+		$('.kkl-main-nav a[data-nav-section], #kkl-offcanvas a[data-nav-section]').removeClass('active');
+		$('.kkl-main-nav, #kkl-offcanvas').find('a[data-nav-section="'+section+'"]').addClass('active');
 		
 	};
 
@@ -309,7 +309,7 @@
 	};
 
 	var sayingsAnimate = function() {
-		var sayings = $('#fh5co-sayings');
+		var sayings = $('#kkl-sayings');
 		if ( sayings.length > 0 ) {	
 
 			sayings.waypoint( function( direction ) {
@@ -337,17 +337,17 @@
 		}
 	};
 
-	var featureAnimate = function() {
-		var feature = $('#fh5co-featured');
-		if ( feature.length > 0 ) {	
+	var galleryAnimate = function() {
+		var gallery = $('#kkl-gallery');
+		if ( gallery.length > 0 ) {	
 
-			feature.waypoint( function( direction ) {
+			gallery.waypoint( function( direction ) {
 										
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
 
 
 					setTimeout(function() {
-						feature.find('.to-animate').each(function( k ) {
+						gallery.find('.to-animate').each(function( k ) {
 							var el = $(this);
 							
 							setTimeout ( function () {
@@ -358,7 +358,7 @@
 					}, 200);
 
 					setTimeout(function() {
-						feature.find('.to-animate-2').each(function( k ) {
+						gallery.find('.to-animate-2').each(function( k ) {
 							var el = $(this);
 							
 							setTimeout ( function () {
@@ -378,7 +378,7 @@
 	};
 
 	var typeAnimate = function() {
-		var type = $('#fh5co-type');
+		var type = $('#kkl-type');
 		if ( type.length > 0 ) {	
 
 			type.waypoint( function( direction ) {
@@ -406,7 +406,7 @@
 	};
 
 	var foodMenusAnimate = function() {
-		var menus = $('#fh5co-menus');
+		var menus = $('#kkl-menus');
 		if ( menus.length > 0 ) {	
 
 			menus.waypoint( function( direction ) {
@@ -446,7 +446,7 @@
 
 
 	var eventsAnimate = function() {
-		var events = $('#fh5co-events');
+		var events = $('#kkl-events');
 		if ( events.length > 0 ) {	
 
 			events.waypoint( function( direction ) {
@@ -485,7 +485,7 @@
 	};
 
 	var reservationAnimate = function() {
-		var contact = $('#fh5co-contact');
+		var contact = $('#kkl-contact');
 		if ( contact.length > 0 ) {	
 
 			contact.waypoint( function( direction ) {
@@ -524,7 +524,7 @@
 	};
 
 	var footerAnimate = function() {
-		var footer = $('#fh5co-footer');
+		var footer = $('#kkl-footer');
 		if ( footer.length > 0 ) {	
 
 			footer.waypoint( function( direction ) {
@@ -584,7 +584,7 @@
 		homeAnimate();
 		aboutAnimate();
 		sayingsAnimate();
-		featureAnimate();
+		galleryAnimate();
 		typeAnimate();
 		foodMenusAnimate();
 		eventsAnimate();
